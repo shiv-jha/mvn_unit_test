@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -18,7 +19,9 @@ public class TestMagicBuilder {
     @Test
     public void testLucky() {
     	System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-    	WebDriver driver = new ChromeDriver();
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--remote-allow-origins=*");
+    	WebDriver driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.get("http://tutorialsninja.com/demo");
 		
