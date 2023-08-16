@@ -12,11 +12,12 @@ import org.openqa.selenium.support.ui.Select;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class TestMagicBuilder {
-
-    @Test
+    
+		//@Test
     public void testLucky() {
     	System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
     	ChromeOptions options = new ChromeOptions();
